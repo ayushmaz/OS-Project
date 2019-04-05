@@ -25,6 +25,17 @@ void sorting(struct Process temp[] ,  int n)
 			}
 		}
 	}
+void processWaitTime( struct Process arr[] , int n , int wt[])
+{
+	int i;
+	
+	wt[0] = 0; // initializing the 'process 1' waiting time as 0. 
+	for(i = 0 ; i< n ; i++)
+	{
+		wt[i] = arr[i-1].burst_time + wt[i-1];
+	}
+	
+}
 	
 }
 int main()
